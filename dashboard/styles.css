@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.dashboard-header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance-amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+.negative {
+    color: #e74c3c;
+}
+
+/* Transaction Form */
+.transaction-form {
+    grid-column: 1 / -1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+/* Transaction Table */
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.transactions-table th, 
+.transactions-table td {
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.transactions-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.transaction-amount {
+    font-weight: 600;
+}
+
+.transaction-income {
+    color: #2ecc71;
+}
+
+.transaction-expense {
+    color: #e74c3c;
+}
+
+.transaction-actions {
+    text-align: right;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    width: auto;
+    padding: 5px;
+}
+
+/* Budget Bars */
+.budget-bar {
+    margin-bottom: 15px;
+}
+
+.budget-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+.progress-food {
+    background-color: #3498db;
+}
+
+.progress-transportation {
+    background-color: #9b59b6;
+}
+
+.progress-entertainment {
+    background-color: #e67e22;
+}
+
+.progress-housing {
+    background-color: #1abc9c;
+}
+
+.progress-utilities {
+    background-color: #f1c40f;
+}
+
+.progress-other {
+    background-color: #95a5a6;
+}
+
+.warning {
+    background-color: #f39c12;
+}
+
+.danger {
+    background-color: #e74c3c;
+}
+
+/* Summary Section */
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* fffffffffff
+/* Fade-in effect for the page */
+body {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Smooth slide-in for transactions */
+.transaction-row {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: slideIn 0.5s ease-in-out forwards;
+}
+
+/* Button hover effects */
+button {
+    transition: transform 0.2s ease-in-out, background-color 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #007bff;
+    color: white;
+}
+
+/* Pulsating effect for the top spending category */
+#top-category {
+    animation: pulse 1.5s infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* kjffffff   
+/* Smooth gradient background animation */
+body {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+/* Animated floating background bubbles */
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+}
+
+/* Bubble elements */
+.bubble {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: floating 4s ease-in-out infinite;
+}
+
+/* Place bubbles randomly */
+.bubble:nth-child(1) {
+    top: 10%;
+    left: 15%;
+    animation-duration: 6s;
+}
+
+.bubble:nth-child(2) {
+    top: 50%;
+    left: 70%;
+    animation-duration: 5s;
+}
+
+.bubble:nth-child(3) {
+    top: 80%;
+    left: 30%;
+    animation-duration: 7s;
+}
+
+/* Keyframe for animated gradient background */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glow effect for balance */
+#balance {
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    to {
+        text-shadow: 0 0 15px rgba(255, 255, 255, 1);
+    }
+}
+
+/* animation button 
+/* Sparkle Effect for Add Transaction Button */
+.add-transaction-btn {
+    position: relative;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.add-transaction-btn:hover {
+    filter: drop-shadow(0 0 10px #fffdef);
+}
+
+/* Sparkle Stars */
+.add-transaction-btn::before {
+    content: "✨✨";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.add-transaction-btn:hover::before {
+    opacity: 1;
+}
+
+
